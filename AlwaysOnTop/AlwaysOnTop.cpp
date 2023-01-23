@@ -8,7 +8,6 @@ int main(int args) {
 	RegisterHotKey(NULL, 1, MOD_ALT, VK_F1);    // Regist hot key: ALT + F1
     MSG msg = { 0 };
     printf("Always On Top (0)\n");
-    
 
     while (GetMessage(&msg, NULL, 0, 0)) {    // Message queue
         switch (msg.message) {
