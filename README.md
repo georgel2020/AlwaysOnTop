@@ -10,6 +10,8 @@ A small tool to make a window always stay on the top.
 
     For `V_KEY`: see [Virtual Key Codes](https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes). 
 
+    Note: If you are using [Windows Terminal](https://learn.microsoft.com/zh-cn/windows/terminal/install) in Windows 11, the `BOOL_SHOWWINDOW` will not work. 
+
 2. Run the app. 
 
 3. Active a window and press the hot key. 
