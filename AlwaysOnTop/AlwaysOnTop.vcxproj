@@ -129,6 +129,17 @@
   <ItemGroup>
     <ClCompile Include="AlwaysOnTop.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AlwaysOnTop.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="C:\Users\George\Downloads\bursts.ico" />
+    <Image Include="C:\Users\George\Downloads\bursts.png" />
+    <Image Include="Icon.ico" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
