@@ -14,12 +14,17 @@ int modKey, vKey;
 // vKey: [Virtual Key Codes](https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes). 
 
 bool showWindow;
+int playSoundStartup, playSoundTop, playSoundNoTop, soundTime;
 
 int main()
 {
+    Beep(1000, 100);
     ifstream fin("config.txt");    // Read config file. 
     fin >> modKey >> vKey;
     fin >> showWindow;
+    fin >> playSoundStartup >> playSoundTop >> playSoundNoTop >> soundTime;
+
+    if (playSoundStartup != 0)Beep(playSoundStartup, soundTime);    // Play sound on startup. 
 
     if(!showWindow) ShowWindow(GetConsoleWindow(), SW_HIDE);    // Hide console window. 
 
@@ -42,6 +47,8 @@ int main()
                     for (int i = 0; i < topCount; i++) {
                         if (topWindow[i] == hwnd) {
                             SetWindowPos(hwnd, HWND_NOTOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);     // Set window NOTOPMOST. 
+                            if (playSoundNoTop != 0)Beep(playSoundNoTop, soundTime);    // Play sound. 
+
                             topWindow[topCount] = 0;
                             topCount--;
                             top = true;
@@ -51,6 +58,7 @@ int main()
 
                     if (top == false) {
                         SetWindowPos(hwnd, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);    // Set window TOPMOST. 
+                        if (playSoundTop != 0)Beep(playSoundTop, soundTime);    // Play sound. 
 
                         topCount++;
                         topWindow[topCount - 1] = hwnd;    // Record window hwnd. 
