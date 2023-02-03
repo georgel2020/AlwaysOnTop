@@ -30,12 +30,6 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="C:\Users\George\Downloads\bursts.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="C:\Users\George\Downloads\bursts.ico">
-      <Filter>资源文件</Filter>
-    </Image>
     <Image Include="Icon.ico">
       <Filter>资源文件</Filter>
     </Image>
