@@ -1,5 +1,5 @@
 # AlwaysOnTop
-A small tool to make a window always stay on the top. 
+__A small tool to make a window always stay on the top.__ 
 ## Usage
 1. Edit the config file. 
     ```
