@@ -16,6 +16,15 @@ __A small tool to make a window always stay on the top.__
     For `INT_SOUNDLASTTIME`, input an integer (ms). 
 
     Note: If you are using [Windows Terminal](https://learn.microsoft.com/zh-cn/windows/terminal/install) in Windows 11, the `BOOL_SHOWWINDOW` will not work. 
+    
+    Example: 
+    
+    _config.txt_
+    ```
+    1 112
+    1
+    1000 800 600 200
+    ```
 
 2. Run the app. 
 
