@@ -28,7 +28,21 @@ int main()
 
     if(!showWindow) ShowWindow(GetConsoleWindow(), SW_HIDE);    // Hide console window. 
 
+    // Print config. 
+    else {
+        printf("Current config: \n");
+        printf("Hotkey: %d + %d\n", modKey, vKey);
+        if (!playSoundStartup) printf("Startup sound: false\n");
+        else printf("Startup sound: %d\n", playSoundStartup);
+        if (!playSoundTop) printf("Top sound: false\n");
+        else printf("Startup sound: %d\n", playSoundTop);
+        if (!playSoundNoTop) printf("No top sound: false\n");
+        else printf("Startup sound: %d\n", playSoundNoTop);
+        printf("Sound time: %d ms\n\n", soundTime);
+    }
+
     if (RegisterHotKey(NULL, 1, modKey, vKey) == false) {
+        ShowWindow(GetConsoleWindow(), SW_SHOW);    // Show console window. 
         printf("Error: Cannot register hotkey\n");    // Register fail. 
         getchar();
     }    // Regist hot key: ALT + F1. 
